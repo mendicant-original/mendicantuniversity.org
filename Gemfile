@@ -7,3 +7,5 @@ gem "compass"
 gem "rdiscount"
 
 gem "rack"
+
+gem "capistrano"
