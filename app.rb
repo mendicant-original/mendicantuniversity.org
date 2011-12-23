@@ -25,13 +25,6 @@ end
 
 get('/') { haml :index }
 
-get '/changelog.?:format?' do
-  url = "http://school.mendicantuniversity.org/changelog"
-  url += ".#{params[:format]}" if params[:format]
-
-  redirect url
-end
-
 # About
 
 get('/about/courses.?:format?')    { markdown :'about/courses'    }
@@ -53,14 +46,14 @@ get('/resources/student_projects.?:format?') do
   markdown :'resources/student_projects'
 end
 
-get '/alumni/?:path?' do
-  url = "http://school.mendicantuniversity.org/alumni"
-  url += "/#{params[:path]}" if params[:path]
-
-  redirect url
-end
-
 get '/stylesheets/screen.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass :screen
+end
+
+get '/*' do
+  url = "http://school.mendicantuniversity.org"
+  url += "/#{params[:splat].first}" if params[:splat] && params[:splat].first
+
+  redirect url
 end
