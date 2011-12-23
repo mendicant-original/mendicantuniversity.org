@@ -1,0 +1,73 @@
+!!! Strict
+%html
+  %head
+    %title Mendicant University
+    %meta{:"http-equiv"=>"Content-Type",:content=>"text/html;charset=utf-8"}
+    %link{:href=>"/stylesheets/screen.css",:type=>"text/css",:rel=>"stylesheet"}
+    %script{:type => "text/javascript",
+            :src  => "/javascripts/jquery.min.js" }
+    %script{:type => "text/javascript",
+            :src  => "/javascripts/dropdownmenu.js" }
+    %link{:rel   => "alternate",
+          :type  => "application/rss+xml",
+          :title => "Mendicant University's News Feed",
+          :href  => "http://school.mendicantuniversity.com/changelog.rss" }
+
+    :javascript
+      $(function(){
+        var currentPage = $('ul a[href="' + location.pathname.replace(".html", "") + '"]').
+          parents('ul.menu li:last').children('a');
+
+        if(currentPage) currentPage.addClass('current');
+      });
+  %body
+    #header
+      %h1 Mendicant University
+
+      #menu_bar
+        %ul.menu
+          %li.main.first
+            %a{:href=>"/"} Home
+          %li.main
+            %a{:href=>"/changelog"} News
+          %li.main#about
+            %a.dropdown{:href=>"#"}
+              About
+              %span.arrow
+            #about_dropdown
+              %ul
+                %li
+                  %a{:href => "/about/courses"} Courses
+                %li
+                  %a{:href => "/about/admissions"} Admissions
+                %li
+                  %a{:href => "/about/staff"} Staff
+                %li
+                  %a{:href => "/about/contact"} Contact Us
+
+            :javascript
+              DropdownMenu.register('about');
+
+          %li.main#resources
+            %a.dropdown{:href=>"#"}
+              Resources
+              %span.arrow
+            #resources_dropdown
+              %ul
+                %li
+                  %a{:href => "/resources/learning_materials"} Learning Materials
+                %li
+                  %a{:href => "/resources/core_projects"} Core Projects
+                %li
+                  %a{:href => "/resources/student_projects"} Student Projects
+
+            :javascript
+              DropdownMenu.register('resources');
+
+          %li.main
+            %a{:href=>"/alumni/recent"} Alumni List
+          %li.main.last
+            %a{:href=>"http://school.mendicantuniversity.org"} University Web
+    #container
+      #content
+        = yield
