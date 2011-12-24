@@ -30,6 +30,7 @@ get('/') { haml :index }
 get('/about/courses.?:format?')    { markdown :'about/courses'    }
 get('/about/admissions.?:format?') { markdown :'about/admissions' }
 get('/about/staff.?:format?')      { markdown :'about/staff'      }
+get('/about/history.?:format?')    { markdown :'about/history'    }
 get('/about/contact.?:format?')    { markdown :'about/contact'    }
 
 # Resources
