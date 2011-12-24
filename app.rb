@@ -27,23 +27,45 @@ get('/') { haml :index }
 
 # About
 
-get('/about/courses.?:format?')    { markdown :'about/courses'    }
-get('/about/admissions.?:format?') { markdown :'about/admissions' }
-get('/about/staff.?:format?')      { markdown :'about/staff'      }
-get('/about/history.?:format?')    { markdown :'about/history'    }
-get('/about/contact.?:format?')    { markdown :'about/contact'    }
+get('/about/courses.?:format?') do
+  @title = "Courses"
+  markdown :'about/courses'
+end
+
+get('/about/admissions.?:format?') do
+  @title = "Admissions"
+  markdown :'about/admissions'
+end
+
+get('/about/staff.?:format?') do
+  @title = "Staff"
+  markdown :'about/staff'
+end
+
+get('/about/history.?:format?') do
+  @title = "History"
+  markdown :'about/history'
+end
+
+get('/about/contact.?:format?') do
+  @title = "Contact Us"
+  markdown :'about/contact'
+end
 
 # Resources
 
 get('/resources/learning_materials.?:format?') do
+  @title = "Learning Materials"
   markdown :'resources/learning_materials'
 end
 
 get('/resources/core_projects.?:format?') do
+  @title = "Core Projects"
   markdown :'resources/core_projects'
 end
 
 get('/resources/student_projects.?:format?') do
+  @title = "Student Projects"
   markdown :'resources/student_projects'
 end
 
