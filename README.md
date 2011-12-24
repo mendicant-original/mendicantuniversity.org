@@ -9,7 +9,7 @@ To get up and running, follow these steps:
 
 1. Fork this GitHub repository
 2. Clone the fork to your computer
-3. If you don't have bundler install, grab a copy by running `gem install bundler`
+3. If you don't have bundler installed, grab a copy by running `gem install bundler`
 4. Then, run `bundle install` to install all of the dependencies
 5. Lastly, start the server by running the `rackup` command
 
