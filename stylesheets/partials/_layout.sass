@@ -53,14 +53,9 @@ body
 
 #header
   background: #eee
+  +background-image(linear-gradient(#fff, #eee))
   padding-top: 10px
-  // #logo
-  //   position: relative
-  //   z-index: 100
-  //   max-width: 700px
-  //   margin: 0 auto
   text-align: center
-
 
   img.logo
     float: left
@@ -71,6 +66,7 @@ body
     margin: 0.25em
     font-size: 2.75em
     letter-spacing: 3px
+    +single-text-shadow(0, 1px, 0, #fff)
 
   #menu_bar
     margin: 10px 0
@@ -93,10 +89,8 @@ body
     li.main
       float: left
       background-color: #cccccc
-      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #f0f0f0), color-stop(100%, #cccccc))
-      background-image: -moz-linear-gradient(top, #f0f0f0 0%, #cccccc 100%)
-      background-image: linear-gradient(top, #f0f0f0 0%, #cccccc 100%)
-      text-shadow: 0 1px 0 white
+      +background-image(linear-gradient(#f0f0f0, #cccccc))
+      +single-text-shadow(0, 1px, 0, #fff)
       font-size: 14px
       letter-spacing: 1px
       position: relative
@@ -112,7 +106,7 @@ body
       a
         padding: 4px 10px
         text-decoration: none
-        text-shadow: 0 1px 0 white
+        +single-text-shadow(0, 1px, 0, #fff)
         color: #666
         display: block
 
