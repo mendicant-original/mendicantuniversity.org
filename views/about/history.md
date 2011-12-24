@@ -1,6 +1,6 @@
 ## History of Mendicant University
 
-A partial collection of articles and videos written and recorded about the school. Some of this information is out of date, but it should still give you a feel for what Mendicant University is all about.
+A partial collection of articles and videos written and recorded about the school. Some of this information is out of date, but it should still give you a feel for what Mendicant University is all about. Don't forget to checkout the [news](/changelog) page for the latest updates.
 
 ### Articles
 
