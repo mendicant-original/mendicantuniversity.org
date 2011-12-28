@@ -20,6 +20,8 @@ A partial collection of articles and videos written and recorded about the schoo
 
 [How Mendicant University Works ](http://blog.rubybestpractices.com/posts/gregory/059-how-mendicant-university-works.html): Gregory gives an overview of how the school operates
 
+[The power of free beer](http://majesticseacreature.com/essays/2011/12/28/free-beer-matters.html): A look into why Mendicant University is "Free as in beer"
+
 
 ### Videos
 
