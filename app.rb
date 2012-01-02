@@ -37,6 +37,11 @@ get('/about/admissions.?:format?') do
   markdown :'about/admissions'
 end
 
+get('/about/calendar.?:format?') do
+  @title = "Calendar"
+  haml :'about/calendar'
+end
+
 get('/about/staff.?:format?') do
   @title = "Staff"
   markdown :'about/staff'
