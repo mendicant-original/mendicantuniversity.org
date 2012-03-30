@@ -23,7 +23,7 @@ helpers do
   end
 end
 
-get('/') { haml :index }
+get('/') { haml :index, :layout => :landing }
 
 # About
 
@@ -77,6 +77,11 @@ end
 get '/stylesheets/screen.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass :screen
+end
+
+get '/stylesheets/landing.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass :landing
 end
 
 get '/*' do

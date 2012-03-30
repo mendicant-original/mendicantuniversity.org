@@ -1,0 +1,16 @@
+!!! 5
+%html{ :lang => "en"}
+  %head
+    %title Mendicant University
+
+    %meta{ :charset => "utf-8" }
+
+    %meta{ :content => "Mendicant University supports programmers in developing both their technical skills and their social contributions, to make a real positive impact upon the world.", :name => "description" }
+    %meta{ :content => "Mendicant University", :name => "author" }
+
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+
+    %link{ :href => "/stylesheets/landing.css", :type => "text/css", :rel => "stylesheet" }
+
+  %body
+    #container= yield
